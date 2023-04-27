@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -6,5 +8,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+  customer_email: string = '';
+  password: string = '';
 
+  constructor(private http: HttpClient, private router: Router) { }
+
+  onSubmit() {
+    const data = {
+      'customer_email': this.customer_email,
+      'password': this.password,
+    };
+
+    this.http.post('http://localhost:5000/login', data).subscribe(
+      response => {
+        console.log(response);
+        // handle success response here
+      },
+      error => {
+        console.error(error);
+        // handle error response here
+        this.router.navigate(['/']); // navigate to home page
+      }
+    );
+  }
 }
