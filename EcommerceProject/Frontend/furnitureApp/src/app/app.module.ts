@@ -10,6 +10,7 @@ import { SignupComponent } from './signup/signup.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { AboutComponent } from './about/about.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { AdminModule } from './admin/admin.module'; // Import the Admin module
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CheckoutComponent } from './checkout/checkout.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AdminModule // Add the Admin module to the imports
   ],
   providers: [],
   bootstrap: [AppComponent]

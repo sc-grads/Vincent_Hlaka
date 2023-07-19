@@ -1,0 +1,63 @@
+/* catalogue.component.css */
+
+/* Reset default list styles */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style navigation */
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  margin-right: 10px;
+  color: #333;
+}
+
+/* Style product list */
+main {
+  margin-top: 20px;
+}
+
+h2 {
+  color: #333;
+}
+
+ul li {
+  margin-bottom: 20px;
+}
+
+ul li img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+ul li h3 {
+  margin: 10px 0;
+}
+
+ul li p {
+  color: #666;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+

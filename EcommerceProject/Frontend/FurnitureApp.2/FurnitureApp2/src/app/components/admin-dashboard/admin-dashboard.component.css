@@ -1,0 +1,41 @@
+/* admin-dashboard.component.css (Angular frontend) */
+
+/* Styling for the heading */
+h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Styling for the navigation bar */
+nav {
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #337ab7;
+  padding: 5px 10px;
+  border: 1px solid #337ab7;
+  border-radius: 5px;
+}
+
+nav ul li a:hover {
+  background-color: #337ab7;
+  color: #fff;
+}
+
+/* Optional: Add spacing between the navigation links */
+nav ul li + li {
+  margin-left: 15px;
+}

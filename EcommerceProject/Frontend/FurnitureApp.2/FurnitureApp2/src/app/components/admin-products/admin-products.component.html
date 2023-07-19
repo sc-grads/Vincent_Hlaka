@@ -1,0 +1,62 @@
+<h2>Product Management</h2>
+
+<!-- Add Product Form -->
+<form (submit)="addProduct()">
+  <label for="product-name">Product Name:</label>
+  <input type="text" id="product-name" name="productName" [(ngModel)]="newProduct.product_name" required>
+  <label for="product-description">Product Description:</label>
+  <textarea id="product-description" name="productDescription" [(ngModel)]="newProduct.product_description" required></textarea>
+  <label for="image">Image URL:</label>
+  <input type="text" id="image" name="image" [(ngModel)]="newProduct.image1" required>
+  <label for="price">Price:</label>
+  <input type="number" id="price" name="price" [(ngModel)]="newProduct.price" required>
+  <label for="category">Category:</label>
+  <input type="text" id="category" name="category" [(ngModel)]="newProduct.category_id" required>
+  <button type="submit">Add Product</button>
+</form>
+
+<!-- Product List -->
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{ product.product_id }}</td>
+      <td>{{ product.product_name }}</td>
+      <td>{{ product.product_description }}</td>
+      <td>{{ product.image1 }}</td>
+      <td>{{ product.price }}</td>
+      <td>{{ product.category_id }}</td>
+      <td>
+        <button (click)="deleteProduct(product.product_id)">Delete</button>
+        <button (click)="startEdit(product)">Edit</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Edit Product Form -->
+<form *ngIf="editingProduct" (submit)="updateProduct()">
+  <h3>Edit Product</h3>
+  <label for="edit-product-name">Product Name:</label>
+  <input type="text" id="edit-product-name" name="editProductName" [(ngModel)]="editingProduct.product_name" required>
+  <label for="edit-product-description">Product Description:</label>
+  <textarea id="edit-product-description" name="editProductDescription" [(ngModel)]="editingProduct.product_description" required></textarea>
+  <label for="edit-image">Image URL:</label>
+  <input type="text" id="edit-image" name="editImage" [(ngModel)]="editingProduct.image1" required>
+  <label for="edit-price">Price:</label>
+  <input type="number" id="edit-price" name="editPrice" [(ngModel)]="editingProduct.price" required>
+  <label for="edit-category">Category:</label>
+  <input type="text" id="edit-category" name="editCategory" [(ngModel)]="editingProduct.category_id" required>
+  <button type="submit">Update</button>
+  <button type="button" (click)="cancelEdit()">Cancel</button>
+</form>

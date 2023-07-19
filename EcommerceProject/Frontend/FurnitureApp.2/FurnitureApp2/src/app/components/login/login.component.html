@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/signup">Signup</a></li>
+      <li><a routerLink="/catalogue">Catalogue</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/checkout">Checkout</a></li>
+    </ul>
+  </nav>
+  <h1>Login to your homeware.</h1>
+  <main>
+    <form action="#" method="post">
+      <label for="customer_emai">Email:</label>
+      <input type="email" [(ngModel)]="customer_email" id="customer_emai" name="customer_emai" required><br><br>
+      <label for="password">Password:</label>
+      <input type="password" [(ngModel)]="password" id="password" name="password" required><br><br>
+      <input type="submit" (click)="onSubmit()" value="Login">
+
+
+    </form>
+  </main>
+</body>
+</html>

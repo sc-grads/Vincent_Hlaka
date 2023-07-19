@@ -1,0 +1,27 @@
+/* admin.component.css (Angular frontend) */
+
+/* Set a background color and center the content */
+.admin-container {
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Apply a border and some padding to the container */
+.admin-content {
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #fff;
+}
+
+/* Center the text inside the container */
+.admin-content h1 {
+  text-align: center;
+}
+
+/* Add some margin to the bottom of the container */
+.admin-content {
+  margin-bottom: 20px;
+}

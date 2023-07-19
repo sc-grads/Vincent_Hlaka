@@ -6,6 +6,7 @@ import { SignupComponent } from './signup/signup.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { AboutComponent } from './about/about.component';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { AdminComponent } from './admin/admin.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'catalogue', component: CatalogueComponent },
   { path: 'about', component: AboutComponent },
   { path: 'checkout', component: CheckoutComponent },
+  { path: 'admin', component: AdminComponent },
   { path: '**', component: HomeComponent }
 ];
 

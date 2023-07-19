@@ -1,0 +1,9 @@
+<!-- admin-users.component.html -->
+<h2>User Management</h2>
+
+<!-- Delete User Form -->
+<form (submit)="deleteUser()">
+  <label for="customerId">Customer ID:</label>
+  <input type="number" id="customerId" name="customerId" [(ngModel)]="customerId" required>
+  <button type="submit">Delete User</button>
+</form>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a routerLink="/">Home</a></li>
+      <li><a routerLink="/login">Login</a></li>
+      <li><a routerLink="/catalogue">Catalogue</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/checkout">Checkout</a></li>
+    </ul>
+  </nav>
+  <h2>SingUp and get best deals with us!!</h2>
+  <main>
+    <form>
+      <label for="customer_email">Email:</label>
+      <input type="email" [(ngModel)]="customer_email" id="customer_email" name="customer_email" required pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"><br><br>
+
+      <label for="first_name">First Name:</label>
+      <input type="text" [(ngModel)]="first_name" id="first_name" name="first_name" required><br><br>
+
+      <label for="last_name">Last Name:</label>
+      <input type="text" [(ngModel)]="last_name" id="last_name" name="last_name" required><br><br>
+
+      <label for="password">Password:</label>
+      <input type="password" [(ngModel)]="password" id="password" name="password" minlength="8" required><br><br>
+
+      <label for="address">Address:</label>
+      <input type="text" [(ngModel)]="address" id="address" name="address" required><br><br>
+
+      <label for="postcode">Postcode:</label>
+      <input type="text" [(ngModel)]="postcode" id="postcode" name="postcode" pattern="[0-9]{5}" required><br><br>
+
+      <label for="city">City:</label>
+      <input type="text" [(ngModel)]="city" id="city" name="city" required><br><br>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" [(ngModel)]="phone" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+
+      <input type="submit" (click)="onSubmit()" value="Submit">
+
+    </form>
+
+  </main>
+</body>
+</html>

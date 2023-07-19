@@ -19,16 +19,27 @@ export class LoginComponent {
       'password': this.password,
     };
 
-    this.http.post('http://localhost:5000/login', data).subscribe(
+    this.http.post<any>('http://localhost:5000/login', data).subscribe(
       response => {
         console.log(response);
         // handle success response here
+        if (response.message === 'Login successful') {
+          this.router.navigate(['/catalogue']); // navigate to catalogue page
+        } else {
+          // handle invalid login
+          // show an error message or perform any other necessary action
+        }
       },
       error => {
         console.error(error);
         // handle error response here
-        this.router.navigate(['/']); // navigate to home page
+        // show an error message or perform any other necessary action
       }
     );
   }
 }
+
+
+
+
+
