@@ -10,7 +10,7 @@ class Device:
     def disconnect(self):
         self.connected = False
 
-
+# did
 # printer = Device("Printer", "USB")
 # print(printer)
 
